@@ -11,11 +11,6 @@ const SideLayout = () => {
         </Link>
       </$Div>
       <$Div>
-        <Link to="/station" className="btn btn-primary">
-          Station
-        </Link>
-      </$Div>
-      <$Div>
         <Link to="/test1" className="btn btn-primary">
           TEST
         </Link>
