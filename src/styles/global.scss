@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean");
 
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import './sidebar.scss';
 
 @font-face {
   font-family: "Pretendard-Regular";
@@ -47,7 +48,7 @@ body {
 }
 .wrapper {
   display: flex;
-  height: calc(100% - 80px);
+  height: calc(100%);
   overflow: hidden;
 }
 .content-wrapper {

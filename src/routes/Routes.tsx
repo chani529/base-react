@@ -13,7 +13,6 @@ const Routes = () => {
       element: <DefaultLayout />,
       children: [
         { index: true, element: <Home /> },
-        { path: "iss", element: <IssuePage /> },
         { path: "test1", element: <TestPage /> },
         { path: "test2", element: <Testpage2 /> },
       ],
