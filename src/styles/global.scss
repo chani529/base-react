@@ -48,14 +48,17 @@ body {
 }
 .wrapper {
   display: flex;
+  width: 100%;
   height: calc(100%);
-  overflow: hidden;
+}
+.main-wrapper {
+  flex-grow: 1
 }
 .content-wrapper {
   padding: 40px 50px;
-  width: 100%;
+  width: 80vw;
   position: relative;
-  overflow: auto;
+  // overflow: auto;
 }
 
 /* TODO DELETE */
