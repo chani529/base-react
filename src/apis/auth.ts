@@ -1,7 +1,6 @@
 import { LoginFormData } from "@type/formType";
 import axios from "./config";
 import { Auth, Result } from "@type/responseType";
-import { AUTH } from "./urls";
 
 export default {
   /**
@@ -11,7 +10,7 @@ export default {
    */
   async login(params: LoginFormData): Promise<Result<Auth>> {
     try {
-      return await axios.post(AUTH.SIGNIN, params);
+      return await axios.post("auth", params);
     } catch (e: any) {
       return e.message;
     }

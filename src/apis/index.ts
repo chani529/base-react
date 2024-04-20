@@ -1,8 +1,8 @@
 import Auth from "./auth";
-import Iss from "./issue";
+import Base from "./base";
 
 export default {
-  Iss,
+  Base,
   Auth,
 };
 

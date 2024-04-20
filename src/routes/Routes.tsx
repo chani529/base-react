@@ -2,7 +2,6 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import { DefaultLayout } from "@components/layouts/index";
 import Home from "@pages/Home";
-import IssuePage from "@pages/IssuePage";
 import TestPage from "@pages/TestPage";
 import Testpage2 from "@pages/TestPage2";
 
