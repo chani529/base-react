@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
 import { mobilePhones } from "./utils/sidebarData";
 import { Menu, SidebarProps } from "./utils/sidebarInterfaces";
-
 import Utils from "./utils/sidebarUtils";
 
 const SidebarComponent = (props: SidebarProps) => {
@@ -49,13 +49,6 @@ const SidebarComponent = (props: SidebarProps) => {
             {/* <span className="">{menu.icon}</span> */}
             <span className={"menu-icon"}>{menu.icon}</span>
             <span className={"menu-title"}>{menu.title}</span>
-            {/* 화살표 아이콘 */}
-            {/* {menu.child.length > 0 && (
-                            <FontAwesomeIcon
-                                className="chevron-down float-right"
-                                icon={faChevronDown}
-                            />
-                        )} */}
           </a>
           <ul
             className={"nav-sub-menu"}
@@ -94,13 +87,6 @@ const SidebarComponent = (props: SidebarProps) => {
             data-container={_parent + "-" + index}
           >
             <span className={"menu-title"}>{child.title}</span>
-            {/* 화살표 아이콘 */}
-            {/* {child.child.length > 0 && (
-                            <FontAwesomeIcon
-                                className="chevron-down float-right"
-                                icon={faChevronDown}
-                            />
-                        )} */}
           </a>
           <ul
             className={"nav-sub2-menu"}
@@ -140,26 +126,13 @@ const SidebarComponent = (props: SidebarProps) => {
       <ul className={"nav"}>
         <li className={"nav-header"}>
           <div className={"company-image-logo"}>
-            {props.logo ? (
-              props.logo
-            ) : (
-              <svg
-                viewBox="0 0 24 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              ></svg>
-            )}
+            {props.logo ? props.logo : <div>S</div>}
           </div>
-          <div className={"company-text-logo"}>
-            {props.textLogo ? (
-              props.textLogo
-            ) : (
-              <svg
-                viewBox="0 0 91 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              ></svg>
-            )}
+          <div
+            className={"company-text-logo"}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          >
+            {props.textLogo ? props.textLogo : <TextLogo>PORTFOLIO</TextLogo>}
           </div>
         </li>
         {drawMenus(props.menuList, null, null)}
@@ -169,3 +142,12 @@ const SidebarComponent = (props: SidebarProps) => {
 };
 
 export default SidebarComponent;
+
+const TextLogo = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-weight: bold;
+  font-size: 1.6rem;
+  align-items: center;
+`;
